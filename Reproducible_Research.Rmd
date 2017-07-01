@@ -1,0 +1,48 @@
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
+## Loading and preprocessing the data
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+setwd("C:/old-desktop/Data/Reproducible-Research")
+data <- read.csv(unz("repdata-2Fdata-2Factivity.zip", "activity.csv"),header=T,stringsAsFactors=T, sep=",")
+data$date <- as.Date(data[,2],format="%Y-%m-%d")
+attach(data)
+
+```
+
+## What is mean total number of steps taken per day?
+
+```{r mean}
+data_step <-sum()
+data_nona <- data[complete.cases(data),]
+day_sum <-summarise(group_by(data_nona,date),steps=sum(steps))
+interval_sum <- summarise(group_by(data_nona,interval),steps=mean(steps))
+---
+
+```
+
+## What is the average daily activity pattern?
+
+```{r}
+hist(day_sum$steps,main="Steps Taken Each Day",col="blue",xlab="Steps")
+mean(day_sum$steps)
+median(day_sum$steps)
+with(data_nona,plot(interval,steps,type="l",ylab="Steps)",xlab="Interval"))
+mean(data_nona$steps,
+apply(data_nona,3,mean)     
+mean(interval_sum$)
+```
+
+## Imputing missing values
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+## Are there differences in activity patterns between weekdays and weekends?
