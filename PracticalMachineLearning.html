@@ -137,39 +137,39 @@ pairs(classe ~ roll_belt+pitch_belt+yaw_belt+total_accel_arm+roll_dumbbell+pitch
 model &lt;-randomForest(classif,data=train,importance=TRUE)
 importance(model)</code></pre>
 <pre><code>##                            A        B        C        D        E
-## roll_belt           58.71013 76.59450 76.30844 67.76566 91.13104
-## pitch_belt          43.61841 87.11041 65.01729 59.50777 48.97271
-## yaw_belt            59.54010 75.21743 71.44719 85.69768 44.96264
-## total_accel_arm     28.34339 55.39350 54.64536 48.39326 37.85524
-## roll_dumbbell       36.91563 51.93042 51.72219 44.68774 46.75899
-## pitch_dumbbell      21.28477 31.08664 30.56723 24.82497 33.34331
-## yaw_dumbbell        26.69191 41.98083 45.73108 40.80530 45.99848
-## roll_arm            37.14130 56.81781 47.53299 49.12083 34.70041
-## pitch_arm           28.53638 46.42686 40.14861 37.95144 32.17540
-## magnet_dumbbell_x   35.57809 41.91358 47.05918 39.09517 39.70464
-## magnet_dumbbell_y   47.17254 54.38404 62.27812 54.03994 48.72198
-## magnet_dumbbell_z   66.05913 61.51275 89.54711 62.25376 61.23317
-## roll_forearm        40.59384 37.21937 48.16425 37.94279 35.76730
-## pitch_forearm       52.31636 64.68856 60.13508 81.95000 60.76034
-## yaw_forearm         29.23255 39.24825 40.58403 40.32964 41.77783
-## total_accel_forearm 30.77262 38.23278 43.79723 35.22952 30.28779
+## roll_belt           57.74579 77.53452 79.67831 68.07171 82.93572
+## pitch_belt          43.30446 87.16658 61.55363 60.32830 48.34910
+## yaw_belt            59.90604 75.57143 68.75133 84.93489 43.64431
+## total_accel_arm     26.70290 54.90862 57.29444 52.47927 42.01400
+## roll_dumbbell       36.49175 49.23625 48.86476 45.59076 46.57460
+## pitch_dumbbell      20.91675 31.56751 28.65727 24.20949 32.90952
+## yaw_dumbbell        27.95787 44.58355 41.53424 38.97760 46.74195
+## roll_arm            39.75460 52.74068 45.69802 45.60123 34.32337
+## pitch_arm           27.47579 41.84485 41.31596 36.26837 32.46594
+## magnet_dumbbell_x   34.56534 43.86114 47.63764 37.47365 38.58750
+## magnet_dumbbell_y   48.81632 58.35670 69.35131 58.23605 50.45601
+## magnet_dumbbell_z   63.18806 61.65820 83.16072 60.39097 59.31757
+## roll_forearm        39.49966 36.57869 48.71636 35.96296 35.83540
+## pitch_forearm       52.10728 59.11021 55.66388 78.37853 58.21023
+## yaw_forearm         31.04081 36.54697 40.25447 38.19719 39.87147
+## total_accel_forearm 30.81519 35.05932 37.99474 33.06233 29.22415
 ##                     MeanDecreaseAccuracy MeanDecreaseGini
-## roll_belt                       99.20318        2494.7847
-## pitch_belt                      83.99524        1424.4332
-## yaw_belt                        93.12760        1784.9505
-## total_accel_arm                 63.52697         375.5229
-## roll_dumbbell                   55.40949         769.1527
-## pitch_dumbbell                  32.23909         403.9582
-## yaw_dumbbell                    51.13289         577.2851
-## roll_arm                        61.70830         729.1431
-## pitch_arm                       47.29115         385.3577
-## magnet_dumbbell_x               44.74316         909.6616
-## magnet_dumbbell_y               63.40661        1127.5402
-## magnet_dumbbell_z               84.38588        1309.1226
-## roll_forearm                    43.49920        1076.0167
-## pitch_forearm                   79.04025        1419.2364
-## yaw_forearm                     52.72238         453.2178
-## total_accel_forearm             51.08191         272.6586</code></pre>
+## roll_belt                      100.40008        2438.6176
+## pitch_belt                      80.51634        1460.2740
+## yaw_belt                        88.29959        1815.9561
+## total_accel_arm                 62.73816         376.9428
+## roll_dumbbell                   53.29210         778.8594
+## pitch_dumbbell                  30.90447         401.9246
+## yaw_dumbbell                    49.99927         596.4780
+## roll_arm                        59.58962         726.6833
+## pitch_arm                       44.81036         377.4879
+## magnet_dumbbell_x               44.37983         897.6578
+## magnet_dumbbell_y               68.82236        1160.3204
+## magnet_dumbbell_z               81.29100        1297.9047
+## roll_forearm                    42.49024        1065.3266
+## pitch_forearm                   75.23167        1391.7382
+## yaw_forearm                     51.81427         440.0589
+## total_accel_forearm             43.22741         286.1557</code></pre>
 <pre class="r"><code>print(model)</code></pre>
 <pre><code>## 
 ## Call:
@@ -178,14 +178,14 @@ importance(model)</code></pre>
 ##                      Number of trees: 500
 ## No. of variables tried at each split: 4
 ## 
-##         OOB estimate of  error rate: 0.5%
+##         OOB estimate of  error rate: 0.54%
 ## Confusion matrix:
 ##      A    B    C    D    E class.error
-## A 5573    7    0    0    0 0.001254480
-## B   13 3752   30    2    0 0.011851462
-## C    0    9 3408    5    0 0.004091175
-## D    0    0   19 3194    3 0.006840796
-## E    0    2    3    5 3597 0.002772387</code></pre>
+## A 5574    6    0    0    0 0.001075269
+## B   13 3747   35    2    0 0.013168291
+## C    0    7 3405   10    0 0.004967855
+## D    0    0   17 3195    4 0.006529851
+## E    0    3    4    5 3595 0.003326864</code></pre>
 <pre class="r"><code>test_predict &lt;- predict (model,test)</code></pre>
 <div id="the-above-summary-of-results-says-about-the-predicted-value-and-the-error-rate-in-the-confusion-matrix.also-the-out-of-sample-error-rate-of-0.53-if-we-consider-the-all-the-training-data-to-construct-the-model." class="section level5">
 <h5>The above summary of results says about the predicted value and the error rate in the confusion matrix.Also the out of sample error rate of 0.53% if we consider the all the training data to construct the model.</h5>
@@ -195,7 +195,6 @@ importance(model)</code></pre>
 <h2>CROSS VALIDATION ALGORITHM</h2>
 <div id="used-the-3-cross-validation-to-verify-the-out-of-sample-error-and-applied-the-predicted-value-to-the-test-data." class="section level4">
 <h4>Used the 3 cross validation to verify the out of sample error and applied the predicted value to the test data.</h4>
-<p>You can also embed plots, for example:</p>
 <pre class="r"><code>first_seed &lt;- 1234
 accuracies &lt;-c()
 for (i in 1:3){

@@ -14,40 +14,40 @@ PRACTICAL MACHINE LEARNING
     model <-randomForest(classif,data=train,importance=TRUE)
     importance(model)
 
-    ##                            A        B        C        D         E
-    ## roll_belt           62.29118 88.86731 81.96621 72.15317 103.08804
-    ## pitch_belt          42.98242 86.09476 64.33709 61.51408  49.43682
-    ## yaw_belt            61.70123 82.97650 72.83940 80.56336  46.80986
-    ## total_accel_arm     26.54528 53.43234 53.93084 52.91549  40.52533
-    ## roll_dumbbell       38.15291 52.06119 53.20146 44.00045  47.75782
-    ## pitch_dumbbell      21.13486 33.26272 28.87134 25.03165  33.08533
-    ## yaw_dumbbell        28.49412 44.73692 44.86357 40.87600  46.67610
-    ## roll_arm            38.59402 54.81909 47.61576 48.99933  34.59457
-    ## pitch_arm           28.62538 48.00057 42.13231 38.97439  36.54027
-    ## magnet_dumbbell_x   35.38373 40.80984 46.98739 37.41844  38.90073
-    ## magnet_dumbbell_y   47.01989 59.61528 66.32156 56.59194  49.97322
-    ## magnet_dumbbell_z   61.69391 58.56551 81.54843 54.72872  58.27447
-    ## roll_forearm        40.18500 36.94961 46.87064 35.91956  35.27765
-    ## pitch_forearm       53.63346 62.09782 59.54367 87.73455  61.52572
-    ## yaw_forearm         29.90274 36.63611 40.69179 38.93237  39.85376
-    ## total_accel_forearm 31.71984 39.15760 41.29597 34.51238  30.78710
+    ##                            A        B        C        D        E
+    ## roll_belt           60.24627 83.98397 79.79924 70.95037 95.06618
+    ## pitch_belt          40.23555 89.38118 61.89484 58.01389 49.50458
+    ## yaw_belt            62.16708 75.97888 72.01640 85.81619 47.68046
+    ## total_accel_arm     28.85928 52.11837 52.13976 54.01787 41.27630
+    ## roll_dumbbell       37.74008 50.60703 52.69838 47.89971 48.26013
+    ## pitch_dumbbell      19.98638 33.46647 29.62479 24.74176 31.29711
+    ## yaw_dumbbell        28.44086 46.68185 43.26129 39.22014 48.69881
+    ## roll_arm            36.20744 56.81908 46.32824 45.39302 34.60879
+    ## pitch_arm           26.73103 48.38616 39.91699 37.36222 33.62349
+    ## magnet_dumbbell_x   34.59434 40.64609 50.86878 37.41326 38.48013
+    ## magnet_dumbbell_y   49.90095 59.53865 69.99530 55.30990 50.83393
+    ## magnet_dumbbell_z   65.72656 61.13496 84.78495 57.73035 61.62557
+    ## roll_forearm        41.28300 37.43593 49.33124 39.39367 35.80834
+    ## pitch_forearm       51.29640 59.23236 56.45169 76.88710 57.58460
+    ## yaw_forearm         27.23268 35.87296 41.11629 40.09536 42.31400
+    ## total_accel_forearm 31.95742 39.93119 42.16360 35.82703 32.44374
     ##                     MeanDecreaseAccuracy MeanDecreaseGini
-    ## roll_belt                      112.53818        2538.9646
-    ## pitch_belt                      82.71610        1416.2094
-    ## yaw_belt                        99.24785        1742.4135
-    ## total_accel_arm                 61.07714         375.7740
-    ## roll_dumbbell                   55.48884         801.3088
-    ## pitch_dumbbell                  33.01011         402.9477
-    ## yaw_dumbbell                    51.94810         590.9698
-    ## roll_arm                        64.30050         719.4231
-    ## pitch_arm                       49.96329         377.3342
-    ## magnet_dumbbell_x               44.00818         901.7901
-    ## magnet_dumbbell_y               66.37905        1163.5084
-    ## magnet_dumbbell_z               75.62283        1288.2667
-    ## roll_forearm                    42.35620        1060.4582
-    ## pitch_forearm                   82.07248        1411.4485
-    ## yaw_forearm                     53.27460         442.6560
-    ## total_accel_forearm             49.83790         278.5616
+    ## roll_belt                      108.06450        2496.5713
+    ## pitch_belt                      80.87672        1420.8637
+    ## yaw_belt                        96.52288        1783.7349
+    ## total_accel_arm                 62.70496         381.3025
+    ## roll_dumbbell                   56.55440         794.0926
+    ## pitch_dumbbell                  31.57673         404.0678
+    ## yaw_dumbbell                    52.35176         598.1888
+    ## roll_arm                        58.64617         716.5549
+    ## pitch_arm                       46.37915         376.1261
+    ## magnet_dumbbell_x               44.42948         885.8540
+    ## magnet_dumbbell_y               70.25853        1142.3543
+    ## magnet_dumbbell_z               81.60422        1297.9415
+    ## roll_forearm                    44.34546        1092.7089
+    ## pitch_forearm                   74.50410        1396.6791
+    ## yaw_forearm                     51.24844         444.9032
+    ## total_accel_forearm             50.25788         279.9829
 
     print(model)
 
@@ -58,14 +58,14 @@ PRACTICAL MACHINE LEARNING
     ##                      Number of trees: 500
     ## No. of variables tried at each split: 4
     ## 
-    ##         OOB estimate of  error rate: 0.53%
+    ##         OOB estimate of  error rate: 0.54%
     ## Confusion matrix:
     ##      A    B    C    D    E class.error
-    ## A 5571    6    1    1    1 0.001612903
-    ## B   15 3749   31    2    0 0.012641559
-    ## C    0    7 3407    8    0 0.004383402
-    ## D    0    1   19 3194    2 0.006840796
-    ## E    0    2    3    5 3597 0.002772387
+    ## A 5572    7    0    1    0 0.001433692
+    ## B   14 3747   34    2    0 0.013168291
+    ## C    0    8 3407    7    0 0.004383402
+    ## D    0    0   18 3195    3 0.006529851
+    ## E    0    3    4    5 3595 0.003326864
 
     test_predict <- predict (model,test)
 
@@ -88,35 +88,59 @@ CROSS VALIDATION ALGORITHM
            prediction <- predict(modelFit, testingSet)
            testingSet$rightPred <- prediction == testingSet$classe
            t<-table(prediction, testingSet$classe)
-           print(t)
+           print(modelFit)
            accuracy <- sum(testingSet$rightPred)/nrow(testingSet)
            accuracies <- c(accuracies,accuracy)
            print(accuracy)
     }
 
-    ##           
-    ## prediction    A    B    C    D    E
-    ##          A 1394    2    0    0    0
-    ##          B    1  939    6    0    2
-    ##          C    0    8  846    4    0
-    ##          D    0    0    3  800    0
-    ##          E    0    0    0    0  899
+    ## 
+    ## Call:
+    ##  randomForest(formula = classif, data = trainingSet, importance = TRUE) 
+    ##                Type of random forest: classification
+    ##                      Number of trees: 500
+    ## No. of variables tried at each split: 4
+    ## 
+    ##         OOB estimate of  error rate: 0.73%
+    ## Confusion matrix:
+    ##      A    B    C    D    E class.error
+    ## A 4176    7    0    0    2 0.002150538
+    ## B   14 2805   24    5    0 0.015098315
+    ## C    0    9 2551    7    0 0.006232957
+    ## D    0    0   18 2391    3 0.008706468
+    ## E    0    4    6    9 2687 0.007021434
     ## [1] 0.9946982
-    ##           
-    ## prediction    A    B    C    D    E
-    ##          A 1393    5    0    0    0
-    ##          B    1  928    0    0    1
-    ##          C    0   14  854   12    1
-    ##          D    1    2    1  790    5
-    ##          E    0    0    0    2  894
+    ## 
+    ## Call:
+    ##  randomForest(formula = classif, data = trainingSet, importance = TRUE) 
+    ##                Type of random forest: classification
+    ##                      Number of trees: 500
+    ## No. of variables tried at each split: 4
+    ## 
+    ##         OOB estimate of  error rate: 0.77%
+    ## Confusion matrix:
+    ##      A    B    C    D    E class.error
+    ## A 4178    6    0    1    0 0.001672640
+    ## B   15 2799   32    2    0 0.017205056
+    ## C    0   12 2547    8    0 0.007791196
+    ## D    0    0   21 2389    2 0.009535655
+    ## E    0    4    4    6 2692 0.005173688
     ## [1] 0.9908238
-    ##           
-    ## prediction    A    B    C    D    E
-    ##          A 1392    4    0    0    0
-    ##          B    2  937    1    0    0
-    ##          C    0    6  850    9    4
-    ##          D    1    2    4  794    3
-    ##          E    0    0    0    1  894
+    ## 
+    ## Call:
+    ##  randomForest(formula = classif, data = trainingSet, importance = TRUE) 
+    ##                Type of random forest: classification
+    ##                      Number of trees: 500
+    ## No. of variables tried at each split: 4
+    ## 
+    ##         OOB estimate of  error rate: 0.79%
+    ## Confusion matrix:
+    ##      A    B    C    D    E class.error
+    ## A 4172   11    0    1    1 0.003106332
+    ## B   14 2802   32    0    0 0.016151685
+    ## C    0   11 2543   13    0 0.009349435
+    ## D    0    0   21 2388    3 0.009950249
+    ## E    0    2    2    5 2697 0.003325942
     ## [1] 0.9924551
 
     predict_test <- predict (modelFit,test)
@@ -126,4 +150,4 @@ CROSS VALIDATION ALGORITHM
     ##  B  A  B  A  A  E  D  B  A  A  B  C  B  A  E  E  A  B  B  B 
     ## Levels: A B C D E
 
-\`\`\`
+#### In the above method of cross validation sample the out of bag error is in the range of 0.75 and it is very close to the full model OOB error, also the accuracy rate comingout of the cross validation method random forest application is in the good mark.This model is not overfitted it produce the accurate results in the test data prediction.
