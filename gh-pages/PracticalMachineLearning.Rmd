@@ -3,8 +3,8 @@ title: "PracticalMachineLearning"
 author: "Sylas"
 date: "16 July 2017"
 output:
-html_document:
-  keep_md: true
+  md_document: default
+  keep_md: yes
 ---
 
 ```{r setup, include=FALSE}

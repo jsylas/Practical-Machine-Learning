@@ -1,7 +1,7 @@
 PRACTICAL MACHINE LEARNING
 ==========================
 
-#### Reading the data and creating the pairs part for the classifier to be used to go through the visual representation of the classifier i am going to use.To predict the classes of output from the human recognition data. Th class value reprsent, class-A throws elbows to the front,Class-B lifting the dumbbell only halfway (Class C), lowering the dumbbell only halfway (Class D) and throwing the hips to the front (Class E).To predict the class value identified the releveant classifier and created the formula to pass in the random forest algorithm.
+#### Loading the data and creating the pairs plot for the classifier to be used to go through the visual representation of the classifier i am going to use.To predict the classes of output from the human recognition data. Th class value reprsent, class-A throws elbows to the front,Class-B lifting the dumbbell only halfway (Class C), lowering the dumbbell only halfway (Class D) and throwing the hips to the front (Class E).To predict the class value identified the releveant classifier and created the formula to pass in the random forest algorithm.
 
     setwd("C:/Coursera/Practical Machine Learning")
     train <- read.csv("pml-training.csv",header=T,stringsAsFactors=T, sep=",")
@@ -15,39 +15,39 @@ PRACTICAL MACHINE LEARNING
     importance(model)
 
     ##                            A        B        C        D        E
-    ## roll_belt           60.24627 83.98397 79.79924 70.95037 95.06618
-    ## pitch_belt          40.23555 89.38118 61.89484 58.01389 49.50458
-    ## yaw_belt            62.16708 75.97888 72.01640 85.81619 47.68046
-    ## total_accel_arm     28.85928 52.11837 52.13976 54.01787 41.27630
-    ## roll_dumbbell       37.74008 50.60703 52.69838 47.89971 48.26013
-    ## pitch_dumbbell      19.98638 33.46647 29.62479 24.74176 31.29711
-    ## yaw_dumbbell        28.44086 46.68185 43.26129 39.22014 48.69881
-    ## roll_arm            36.20744 56.81908 46.32824 45.39302 34.60879
-    ## pitch_arm           26.73103 48.38616 39.91699 37.36222 33.62349
-    ## magnet_dumbbell_x   34.59434 40.64609 50.86878 37.41326 38.48013
-    ## magnet_dumbbell_y   49.90095 59.53865 69.99530 55.30990 50.83393
-    ## magnet_dumbbell_z   65.72656 61.13496 84.78495 57.73035 61.62557
-    ## roll_forearm        41.28300 37.43593 49.33124 39.39367 35.80834
-    ## pitch_forearm       51.29640 59.23236 56.45169 76.88710 57.58460
-    ## yaw_forearm         27.23268 35.87296 41.11629 40.09536 42.31400
-    ## total_accel_forearm 31.95742 39.93119 42.16360 35.82703 32.44374
+    ## roll_belt           66.42667 78.98877 76.59964 72.62490 93.32570
+    ## pitch_belt          44.92373 90.15030 61.61974 61.45566 48.68108
+    ## yaw_belt            58.86059 76.87709 68.57400 82.92652 45.76576
+    ## total_accel_arm     29.11207 53.37526 57.87700 52.01919 41.18381
+    ## roll_dumbbell       37.88327 49.93124 52.28679 43.76147 46.90406
+    ## pitch_dumbbell      20.20183 31.13421 31.60469 23.06941 31.23649
+    ## yaw_dumbbell        27.78934 41.71636 43.05209 37.21184 44.35212
+    ## roll_arm            36.53076 55.81535 45.20200 47.43572 35.18284
+    ## pitch_arm           28.61178 50.44861 39.93938 41.32870 35.12724
+    ## magnet_dumbbell_x   35.33469 44.19367 46.72083 38.13051 38.62112
+    ## magnet_dumbbell_y   45.78232 57.09527 62.82625 54.70427 50.87394
+    ## magnet_dumbbell_z   63.10748 62.64396 87.07264 62.41303 60.95555
+    ## roll_forearm        41.31264 36.63764 47.65834 36.73878 35.25879
+    ## pitch_forearm       52.07501 63.19483 58.45094 80.92070 60.84548
+    ## yaw_forearm         29.42100 38.95763 40.47632 39.41489 43.49891
+    ## total_accel_forearm 28.07006 37.72550 40.42299 34.80003 29.48830
     ##                     MeanDecreaseAccuracy MeanDecreaseGini
-    ## roll_belt                      108.06450        2496.5713
-    ## pitch_belt                      80.87672        1420.8637
-    ## yaw_belt                        96.52288        1783.7349
-    ## total_accel_arm                 62.70496         381.3025
-    ## roll_dumbbell                   56.55440         794.0926
-    ## pitch_dumbbell                  31.57673         404.0678
-    ## yaw_dumbbell                    52.35176         598.1888
-    ## roll_arm                        58.64617         716.5549
-    ## pitch_arm                       46.37915         376.1261
-    ## magnet_dumbbell_x               44.42948         885.8540
-    ## magnet_dumbbell_y               70.25853        1142.3543
-    ## magnet_dumbbell_z               81.60422        1297.9415
-    ## roll_forearm                    44.34546        1092.7089
-    ## pitch_forearm                   74.50410        1396.6791
-    ## yaw_forearm                     51.24844         444.9032
-    ## total_accel_forearm             50.25788         279.9829
+    ## roll_belt                      106.88848        2479.7078
+    ## pitch_belt                      83.94560        1457.5660
+    ## yaw_belt                        90.01264        1790.0424
+    ## total_accel_arm                 61.50070         372.8416
+    ## roll_dumbbell                   54.37913         780.5171
+    ## pitch_dumbbell                  31.33095         400.1594
+    ## yaw_dumbbell                    49.62200         589.2114
+    ## roll_arm                        59.03742         719.9358
+    ## pitch_arm                       50.99911         388.7978
+    ## magnet_dumbbell_x               44.35763         896.9140
+    ## magnet_dumbbell_y               63.72479        1149.5484
+    ## magnet_dumbbell_z               83.51374        1302.3091
+    ## roll_forearm                    43.32428        1073.9327
+    ## pitch_forearm                   79.93928        1388.8858
+    ## yaw_forearm                     53.77072         442.2193
+    ## total_accel_forearm             44.22344         281.0962
 
     print(model)
 
@@ -58,14 +58,14 @@ PRACTICAL MACHINE LEARNING
     ##                      Number of trees: 500
     ## No. of variables tried at each split: 4
     ## 
-    ##         OOB estimate of  error rate: 0.54%
+    ##         OOB estimate of  error rate: 0.53%
     ## Confusion matrix:
     ##      A    B    C    D    E class.error
-    ## A 5572    7    0    1    0 0.001433692
-    ## B   14 3747   34    2    0 0.013168291
-    ## C    0    8 3407    7    0 0.004383402
-    ## D    0    0   18 3195    3 0.006529851
-    ## E    0    3    4    5 3595 0.003326864
+    ## A 5574    6    0    0    0 0.001075269
+    ## B   15 3746   34    2    0 0.013431657
+    ## C    0    9 3406    7    0 0.004675628
+    ## D    0    0   16 3197    3 0.005907960
+    ## E    0    3    5    4 3595 0.003326864
 
     test_predict <- predict (model,test)
 
