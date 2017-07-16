@@ -50,7 +50,7 @@ for (i in 1:3){
        prediction <- predict(modelFit, testingSet)
        testingSet$rightPred <- prediction == testingSet$classe
        t<-table(prediction, testingSet$classe)
-       print(t)
+       print(modelFit)
        accuracy <- sum(testingSet$rightPred)/nrow(testingSet)
        accuracies <- c(accuracies,accuracy)
        print(accuracy)
@@ -59,4 +59,4 @@ predict_test <- predict (modelFit,test)
 predict_test
 
 ```
-```
+#### In the above method of cross validation sample the out of bag error is in the range of 0.75 and it is very close to the full model OOB error, also the accuracy rate comingout of the cross validation method random forest application is in the good mark.This model is not overfitted it produce the accurate results in the test data prediction.
