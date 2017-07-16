@@ -3,9 +3,8 @@ title: "PracticalMachineLearning"
 author: "Sylas"
 date: "16 July 2017"
 output:
-  md_document: default
   html_document: default
-  
+  md_document: default
 ---
 
 ```{r setup, include=FALSE}
