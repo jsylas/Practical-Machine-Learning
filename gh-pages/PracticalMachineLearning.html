@@ -137,39 +137,39 @@ pairs(classe ~ roll_belt+pitch_belt+yaw_belt+total_accel_arm+roll_dumbbell+pitch
 model &lt;-randomForest(classif,data=train,importance=TRUE)
 importance(model)</code></pre>
 <pre><code>##                            A        B        C        D        E
-## roll_belt           61.21664 80.83557 81.14854 75.09456 93.45080
-## pitch_belt          42.41195 84.25424 63.90371 59.84375 49.55704
-## yaw_belt            60.31620 81.62422 69.01351 84.27598 42.32655
-## total_accel_arm     27.02518 53.31632 55.13463 50.80762 39.44751
-## roll_dumbbell       36.63286 49.75728 51.75057 45.28439 46.08752
-## pitch_dumbbell      20.82572 29.82587 30.64418 22.90975 29.62225
-## yaw_dumbbell        29.15167 44.03467 44.40477 40.53566 46.57321
-## roll_arm            37.82238 53.10974 43.16869 42.46443 34.65154
-## pitch_arm           26.56073 48.24588 40.14984 39.10790 32.90670
-## magnet_dumbbell_x   34.71304 41.89122 46.22112 37.59767 38.86997
-## magnet_dumbbell_y   46.67548 57.25355 67.28173 56.38015 50.80259
-## magnet_dumbbell_z   62.33085 59.71974 81.70990 61.22858 59.11563
-## roll_forearm        42.22804 38.39027 49.60187 38.49274 37.21604
-## pitch_forearm       51.99031 65.37981 60.16199 85.20812 59.08534
-## yaw_forearm         30.28472 39.73322 40.25367 40.00813 44.19408
-## total_accel_forearm 31.76070 38.89159 43.69218 36.67008 33.98105
+## roll_belt           64.07883 86.72269 77.26838 67.53171 91.72799
+## pitch_belt          44.35566 85.58013 59.08506 58.37649 50.85785
+## yaw_belt            59.11044 80.95106 68.28986 83.83051 42.85351
+## total_accel_arm     29.09290 58.14365 54.46384 51.37601 43.91228
+## roll_dumbbell       38.00773 51.44390 50.71518 47.31311 50.19364
+## pitch_dumbbell      20.90722 33.04667 29.38540 24.22383 32.93591
+## yaw_dumbbell        26.41845 42.88620 42.22505 39.07840 47.52779
+## roll_arm            37.23341 52.98026 44.71333 46.93594 32.77933
+## pitch_arm           26.58540 47.18874 38.84594 36.93928 33.00157
+## magnet_dumbbell_x   34.67960 42.08974 47.05366 37.99652 38.57981
+## magnet_dumbbell_y   47.73881 55.61175 66.19454 54.21533 46.61181
+## magnet_dumbbell_z   63.36482 58.92875 85.46381 59.59485 59.27748
+## roll_forearm        39.50857 36.79063 47.18432 36.39321 34.93455
+## pitch_forearm       51.53143 58.48715 58.34626 79.93697 62.82051
+## yaw_forearm         30.97842 38.07080 40.94455 39.94996 42.95349
+## total_accel_forearm 32.74722 39.92456 42.76434 36.77706 31.20160
 ##                     MeanDecreaseAccuracy MeanDecreaseGini
-## roll_belt                      110.22624        2463.4001
-## pitch_belt                      81.74829        1440.0031
-## yaw_belt                        92.07257        1785.4782
-## total_accel_arm                 61.20660         374.5354
-## roll_dumbbell                   53.39011         793.3042
-## pitch_dumbbell                  31.20962         392.3329
-## yaw_dumbbell                    51.77622         596.6747
-## roll_arm                        56.42011         719.1836
-## pitch_arm                       47.16835         386.0291
-## magnet_dumbbell_x               43.60213         903.6905
-## magnet_dumbbell_y               66.70190        1153.4945
-## magnet_dumbbell_z               80.12646        1296.0597
-## roll_forearm                    45.18267        1094.8582
-## pitch_forearm                   81.54505        1375.3947
-## yaw_forearm                     55.08722         451.4023
-## total_accel_forearm             49.94601         286.7014</code></pre>
+## roll_belt                      107.15792        2504.2898
+## pitch_belt                      80.43506        1416.4781
+## yaw_belt                        91.80643        1774.8842
+## total_accel_arm                 66.68703         377.3855
+## roll_dumbbell                   56.33018         785.4184
+## pitch_dumbbell                  32.13653         396.7957
+## yaw_dumbbell                    49.28309         582.0929
+## roll_arm                        60.23563         724.6188
+## pitch_arm                       44.57649         382.4203
+## magnet_dumbbell_x               43.56339         914.8187
+## magnet_dumbbell_y               64.59559        1140.4434
+## magnet_dumbbell_z               79.89178        1311.2480
+## roll_forearm                    42.38086        1076.0780
+## pitch_forearm                   76.27573        1393.2218
+## yaw_forearm                     55.62656         443.3965
+## total_accel_forearm             50.84707         289.2460</code></pre>
 <pre class="r"><code>print(model)</code></pre>
 <pre><code>## 
 ## Call:
@@ -178,14 +178,14 @@ importance(model)</code></pre>
 ##                      Number of trees: 500
 ## No. of variables tried at each split: 4
 ## 
-##         OOB estimate of  error rate: 0.51%
+##         OOB estimate of  error rate: 0.52%
 ## Confusion matrix:
 ##      A    B    C    D    E class.error
 ## A 5574    6    0    0    0 0.001075269
-## B   14 3748   33    2    0 0.012904925
-## C    0    7 3406    9    0 0.004675628
-## D    0    0   14 3198    4 0.005597015
-## E    0    3    5    4 3595 0.003326864</code></pre>
+## B   16 3747   32    2    0 0.013168291
+## C    0    9 3405    8    0 0.004967855
+## D    0    1   16 3197    2 0.005907960
+## E    0    3    3    5 3596 0.003049626</code></pre>
 <pre class="r"><code>test_predict &lt;- predict (model,test)</code></pre>
 <div id="the-above-summary-of-results-says-about-the-predicted-value-and-the-error-rate-in-the-confusion-matrix.also-the-out-of-sample-error-rate-of-0.53-if-we-consider-the-all-the-training-data-to-construct-the-model." class="section level5">
 <h5>The above summary of results says about the predicted value and the error rate in the confusion matrix.Also the out of sample error rate of 0.53% if we consider the all the training data to construct the model.</h5>

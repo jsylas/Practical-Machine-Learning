@@ -3,8 +3,8 @@ title: "PracticalMachineLearning"
 author: "Sylas"
 date: "16 July 2017"
 output:
-  html_document: default
-  md_document: default
+html_document:
+  keep_md: true
 ---
 
 ```{r setup, include=FALSE}
@@ -16,7 +16,7 @@ library(caret)
 #PRACTICAL MACHINE LEARNING
 #### Loading the data and creating the pairs plot for the classifier to be used to go through the visual representation of the classifier i am going to use.To predict the classes of output from the human recognition data. Th class value reprsent, class-A throws elbows to the front,Class-B lifting the dumbbell only halfway (Class C), lowering the dumbbell only halfway (Class D) and throwing the hips to the front (Class E).To predict the class value identified the releveant classifier and created the formula to pass in the random forest algorithm. 
 
-```{r train and test}
+```{r train and test,include=TRUE}
 setwd("C:/Coursera/Practical Machine Learning")
 train <- read.csv("pml-training.csv",header=T,stringsAsFactors=T, sep=",")
 test <- read.csv("pml-testing.csv",header=T,stringsAsFactors=T, sep=",")
